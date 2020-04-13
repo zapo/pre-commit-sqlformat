@@ -1,0 +1,6 @@
+-   id: sqlformat
+    name: sqlformat
+    description: This hook formats SQL files
+    entry: bash -c 'for i in $@; do sqlformat -k upper -i lower -s $i -o $i.new; mv $i{.new,}; done' --
+    language: python
+    types: [sql]
